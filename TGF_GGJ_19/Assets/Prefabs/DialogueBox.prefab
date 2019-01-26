@@ -195,7 +195,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7418681850454869585, guid: 8a35846161896ed4b924b42602904855,
+          type: 3}
         m_MethodName: DisplayNextSentence
         m_Mode: 1
         m_Arguments:

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 //Dillon Z - TGF
+//ALL REFERENCES NEED TO REFERENCE SCENE INSTANCES
 
 public class DialogueManager : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        Debug.Log((sentences == null) + " 5");
+
         animator.SetBool("IsOpen", true);
         nameText.text = dialogue.name;
 
@@ -39,23 +42,35 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        Debug.Log((sentences == null) + " 1");
+        if (sentences == null)
+            EndDialogue();
         if (sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
 
+        Debug.Log((sentences == null) + " 2");
+
         string sentence = sentences.Dequeue();
         dialogueText.text = sentence;
         //coroutine lets you run a function along unity that can start, stop and pause at any moment.
+        Debug.Log((sentences == null) + " 3");
+
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
+
+        Debug.Log((sentences == null) + " 4");
     }
 
     //I don't know what this does.
     IEnumerator TypeSentence (string sentence)
     {
         dialogueText.text = "";
+
+        Debug.Log((sentences == null) + " 6");
+
         foreach (char letter in sentence.ToCharArray()) 
         {
             dialogueText.text += letter;
