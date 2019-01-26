@@ -1,0 +1,78 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+//import ui
+using UnityEngine.UI;
+
+//LastEdit- DPZ - TGF GGJ 2019s
+//tracks health
+public class StatsManager : MonoBehaviour {
+    //temp header: this controls the player's stats like health and food groups.
+
+
+    //*public Text playerText;
+    //*public Text winText;
+
+
+    //Public values available to set
+    public int health; //health
+    public int damage; //damage
+    public int healing; //healing
+
+    //set during play, counters
+    private int totalH;
+
+
+    void Start () {
+
+
+        //reset counters
+
+        //this is to set total health.
+        totalH = health;
+        Display();
+        //*winText.text = "";
+
+    }
+
+    void Update () {
+
+        //Display();
+	}
+
+
+    //get methods
+    public void TakeDamage()
+    {
+        //adds damage, applies food group method.
+        health -= damage;
+        
+    }
+
+    private void Display()
+    {
+        //don't forget the size of the text object!
+        //*playerText.text = this.gameObject.name + ": " + health + "/" + totalH;
+
+        HealthCalc();
+
+    }
+
+    void HealthCalc()
+    {         //death
+        if (health <= 0)
+        {
+            Loss();
+
+            //sound
+            FindObjectOfType<AudioManager>().Play("DeathSound");
+        }
+    }
+
+    public void Loss()
+    {
+        Debug.Log("Is this...?");
+        //*winText.text = "Game Over! You are Winner!";
+        Destroy(gameObject);
+    }
+}

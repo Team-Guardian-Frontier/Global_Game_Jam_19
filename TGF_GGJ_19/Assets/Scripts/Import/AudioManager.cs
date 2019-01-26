@@ -148,11 +148,13 @@ public class AudioManager : MonoBehaviour {
 
     
     void FixedUpdate () {
+        /*
         if (!sounds[1].source.isPlaying && !startedLoop)
         {
             sounds[0].source.Play();
             Debug.Log("Done playing");
             startedLoop = true;
         }
+        */
     }
 }

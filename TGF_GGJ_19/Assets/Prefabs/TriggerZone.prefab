@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 61726959440621382}
   - component: {fileID: 212566285490321042}
   - component: {fileID: 114999700727325678}
+  - component: {fileID: 211971893950217515}
   m_Layer: 0
-  m_Name: GoalWin
+  m_Name: TriggerZone
   m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,3 +125,16 @@ MonoBehaviour:
     sentences:
     - So you've entered my domain...
     - Funky bunch, Get em!
+--- !u!114 &211971893950217515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981372848700120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af9bcfe0403db6458a2d2819227e419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mydialogue: {fileID: 114999700727325678}

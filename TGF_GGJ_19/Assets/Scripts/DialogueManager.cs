@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour
 
     public Text nameText;
     public Text dialogueText;
-    public Animator animator;
+    private Animator animator;
         //DON'T USE SINGLETON because of these object references. it's a pain. if you ever, make it a prefab, make it parent and child or some sorta relationship that's trackable.
 
     private Queue<string> sentences;
@@ -21,6 +21,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+        animator = this.GetComponentInChildren<Animator>();
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -63,6 +64,9 @@ public class DialogueManager : MonoBehaviour
 
         Debug.Log((sentences == null) + " 4");
     }
+
+    //can have discrete display next that loads next sentence without animation if need be. idk.
+    //might not even need animations. can have those be separate calls.
 
     //I don't know what this does.
     IEnumerator TypeSentence (string sentence)
