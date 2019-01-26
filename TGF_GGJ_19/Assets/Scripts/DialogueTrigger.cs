@@ -4,12 +4,13 @@ using UnityEngine;
 
 //Dillon Z - TGF
 //Triggers dialogue
+//if you need a specific character trigger, write it in that character's script. aka write another script.
 
 public class DialogueTrigger : MonoBehaviour
 {
 
     public Dialogue dialogue;
-    private bool triggered = false;
+    protected bool triggered = false;
 
 
     public void TriggerDialogue()
@@ -26,14 +27,6 @@ public class DialogueTrigger : MonoBehaviour
         triggered = false;
     }
 
-    //Trigger collision detection for player
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        //checks if what entered trigger
-        if (other.gameObject.CompareTag("Player"))
-        {
-            TriggerDialogue();
-        }
-    }
+
 
 }

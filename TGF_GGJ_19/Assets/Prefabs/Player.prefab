@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 61876487247736998}
   - component: {fileID: 50278194905953676}
   - component: {fileID: 114935403640943312}
+  - component: {fileID: 6831607261052928369}
   - component: {fileID: 95521577300557392}
   m_Layer: 9
   m_Name: Player
@@ -152,10 +153,25 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  horizontalRayCount: 4
+  verticalRayCount: 4
   jumpTime: 1
   jumpTimeCounter: 0
   stoppedJumping: 0
   flashAmount: 10
+--- !u!114 &6831607261052928369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351269991133630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc83659771e0631478adc2ee91790e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 0}
 --- !u!95 &95521577300557392
 Animator:
   serializedVersion: 3

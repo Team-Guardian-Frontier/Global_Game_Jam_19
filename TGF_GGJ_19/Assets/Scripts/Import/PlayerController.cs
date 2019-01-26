@@ -22,6 +22,7 @@ list of fields
     - myCollider: gets the Collider2d component from the player
     - myAnimator: gets the animator component for the player
 Notes:
+raycast not implemented yet, maybe later.
 */
 
 
@@ -138,7 +139,7 @@ public class PlayerController : MonoBehaviour {
             jumpTimeCounter = jumpTime;
         }
 
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (Time.timeScale == 0)
             {
@@ -155,7 +156,7 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space)) && !stoppedJumping)
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && !stoppedJumping)
         {
             if (jumpTimeCounter > 0)
             {
