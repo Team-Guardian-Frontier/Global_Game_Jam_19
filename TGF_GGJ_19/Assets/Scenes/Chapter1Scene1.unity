@@ -498,13 +498,77 @@ MonoBehaviour:
         notices soldiers in an unknown uniform have their weapons focused on her,
         encircling Mage*'
   - chain:
-    - name: jo
-      sentence: hey bub1
+    - name: Mage
+      sentence: Eeek! *She squeaks, putting her hands in the air*
+    - name: Calendula
+      sentence: "Mah name\u2019s Calendula and you\u2019ve just set foot on the wrong
+        battlefield! State your name, NOW! *She yells as she cocks her gun, placing
+        her finger on the trigger*"
+    - name: Mage
+      sentence: "My name is Mage! I\u2019m an enforcer from another universe, hunting
+        down a dangerous, dark entity."
+    - name: Calendula
+      sentence: What's your nationality?
+    - name: Mage
+      sentence: "*speaking reluctantly* I don\u2019t know if you\u2019ve heard of
+        my country, since I\u2019m not sure it exists in this dimension or not."
+    - name: Calendula
+      sentence: "I asked, WHAT\u2019S YOUR NATIONALITY?!"
+    - name: Mage
+      sentence: "I\u2019m from the United States of America! *She says very quickly,
+        in a panicky way*"
+    - name: Calendula
+      sentence: The United States of what now?
     - name: oj
       sentence: Hang In there! You can do it!
   - chain:
-    - name: Here's the
-      sentence: Stinger!
+    - name: 
+      sentence: '*Calendula slowly lowers her weapon, while the rest of the soldiers
+        remained with their weapons trained on Mage*'
+    - name: Calendula
+      sentence: Get up. *motioning for Mage to get up off the ground*
+    - name: 
+      sentence: '*Mage slowly gets up off the ground, careful not to make any sudden
+        movements so as not to spook any of the soldiers into shooting. She then attempts
+        to pick up her staff she dropped on the ground when she fell*'
+    - name: 
+      sentence: '*Putting hand out, motioning Mage to stop* Leave it, one of my men
+        will get it for you.'
+    - name: Mage
+      sentence: "That\u2019s not a good idea! *She says frantically, motioning for
+        the soldier who was already inches away from touching her staff to stop immediately*"
+    - name: Mage
+      sentence: "There\u2019s a spirit inside the staff which only lets me wield it.
+        Anyone else attempting to do so will most likely be hospitalized. *She says
+        in a very timid voice*"
+    - name: Calendula
+      sentence: "Okay then, let her pick it up. but keep an eye on her movement. \r
+        Answer me this then, what exactly is this rogue creature?"
+    - name: Mage
+      sentence: "It\u2019s...it\u2019s a Primarian, a creature of pure emotion and
+        thought that can manipulate other people\u2019s emotions and personality causing
+        chaos and dissidence! It\u2019s going to destroy the universe unless I find
+        it!"
+    - name: Calendula
+      sentence: "Right then, ya make a compelling argument. Let\u2019s see what we
+        can do\u2026"
+    - name: Calendula
+      sentence: '...'
+  - chain:
+    - name: Mage
+      sentence: '....? Is.. everything okay, miss?'
+    - name: Calendula
+      sentence: " It\u2019s nothing..don\u2019t mind me."
+    - name: Mage
+      sentence: " I just want to help, I\u2019m worried...I hate seeing people not
+        feeling well. Honest. "
+    - name: Calendula
+      sentence: ' I guess. To be honest, I just miss me home. Me family.'
+    - name: Mage
+      sentence: ' Woah...I never really felt like that. I never had a good family
+        life; My mom and dad never really were around.'
+    - name: 'Calendula '
+      sentence: "Aah..I\u2019m sorry, girlie. A family should be\u2026"
 --- !u!114 &1784264289
 MonoBehaviour:
   m_ObjectHideFlags: 0
