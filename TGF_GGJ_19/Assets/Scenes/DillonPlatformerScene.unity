@@ -732,6 +732,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 50278194905953676, guid: 43d80fa017eb49a4da7a399645b795ce,
+        type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50278194905953676, guid: 43d80fa017eb49a4da7a399645b795ce,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: c845f9d38f6d92d4f88a07f0bbfd542d, type: 2}
     - target: {fileID: 114935403640943312, guid: 43d80fa017eb49a4da7a399645b795ce,
         type: 3}
       propertyPath: Stand
@@ -744,16 +754,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 4ac32c38c360d4c41adc61e704356130,
         type: 3}
-    - target: {fileID: 95521577300557392, guid: 43d80fa017eb49a4da7a399645b795ce,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6831607261052928369, guid: 43d80fa017eb49a4da7a399645b795ce,
         type: 3}
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 1444576407}
+    - target: {fileID: 95521577300557392, guid: 43d80fa017eb49a4da7a399645b795ce,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43d80fa017eb49a4da7a399645b795ce, type: 3}
 --- !u!1001 &1627506033

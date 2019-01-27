@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 4250366596411423012}
   dialogueText: {fileID: 4250366596388887684}
+  animator: {fileID: 4250366596447941058}
 --- !u!1001 &4256830762334227915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53,11 +54,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7418681850454869586}
     m_Modifications:
-    - target: {fileID: 139357464823086101, guid: 2c0781f644ec2f2418d429ce21502e40,
-        type: 3}
-      propertyPath: m_Name
-      value: DialogueBox
-      objectReference: {fileID: 0}
     - target: {fileID: 139357464823086090, guid: 2c0781f644ec2f2418d429ce21502e40,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -163,6 +159,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 139357464823086101, guid: 2c0781f644ec2f2418d429ce21502e40,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueBox
+      objectReference: {fileID: 0}
     - target: {fileID: 139357464475403896, guid: 2c0781f644ec2f2418d429ce21502e40,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -178,6 +179,12 @@ PrefabInstance:
 --- !u!224 &4250366596447941057 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 139357464823086090, guid: 2c0781f644ec2f2418d429ce21502e40,
+    type: 3}
+  m_PrefabInstance: {fileID: 4256830762334227915}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4250366596447941058 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 139357464823086089, guid: 2c0781f644ec2f2418d429ce21502e40,
     type: 3}
   m_PrefabInstance: {fileID: 4256830762334227915}
   m_PrefabAsset: {fileID: 0}

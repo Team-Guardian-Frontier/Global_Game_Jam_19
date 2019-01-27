@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 //Dillon Z - TGF
 //ALL REFERENCES NEED TO REFERENCE SCENE INSTANCES
+//start dialogue will load next dialogue, and stuff.
 
 public class DialogueManager : MonoBehaviour
 {
 
     public Text nameText;
     public Text dialogueText;
+    [SerializeField]
     private Animator animator;
         //DON'T USE SINGLETON because of these object references. it's a pain. if you ever, make it a prefab, make it parent and child or some sorta relationship that's trackable.
 
@@ -24,11 +26,33 @@ public class DialogueManager : MonoBehaviour
         animator = this.GetComponentInChildren<Animator>();
     }
 
+    
+
+    //animation
+    public void StartAnim()
+    {
+        animator.SetBool("IsOpen", true);
+    }
+    void EndDialogue()
+    {
+        animator.SetBool("IsOpen", false);
+        sentences = null;
+    }
+
+    //GET (DOESN'T WORK)
+    public bool IsPlaying()
+    {
+        bool result = false;
+        //if sentences has stuff, true, else false.
+        if (sentences != null)
+            result = true;
+        return result;
+    }
+
     public void StartDialogue(Dialogue dialogue)
     {
-        Debug.Log((sentences == null) + " 5");
 
-        animator.SetBool("IsOpen", true);
+
         nameText.text = dialogue.name;
 
         sentences.Clear();
@@ -41,9 +65,18 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
 
+    public void ConcatDialogue(Dialogue dialogue)
+    {
+        foreach (string sentence in dialogue.sentences)
+        {
+            sentences.Enqueue(sentence);
+        }
+    }
+
+    //returns if there is no more sentences (if, true, load next)
     public void DisplayNextSentence()
     {
-        Debug.Log((sentences == null) + " 1");
+
         if (sentences == null)
             EndDialogue();
         if (sentences.Count == 0)
@@ -52,17 +85,14 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        Debug.Log((sentences == null) + " 2");
-
         string sentence = sentences.Dequeue();
         dialogueText.text = sentence;
         //coroutine lets you run a function along unity that can start, stop and pause at any moment.
-        Debug.Log((sentences == null) + " 3");
 
-        StopAllCoroutines();
+        StopCoroutine("TypeSentence");
         StartCoroutine(TypeSentence(sentence));
 
-        Debug.Log((sentences == null) + " 4");
+        
     }
 
     //can have discrete display next that loads next sentence without animation if need be. idk.
@@ -82,10 +112,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void EndDialogue()
-    {
-        animator.SetBool("IsOpen", false);
-    }
+ 
     
     
 }

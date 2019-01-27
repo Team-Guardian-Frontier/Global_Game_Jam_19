@@ -8,25 +8,31 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-
+    public DialogueManager dmanager;
+    [Space(20)]
     public Dialogue dialogue;
-    protected bool triggered = false;
-
 
     public void TriggerDialogue()
     {
-        if (triggered == false)
+        try { 
+            dmanager.StartDialogue(dialogue);
+            dmanager.StartAnim();
+        }
+        catch
         {
-            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-            triggered = true;
+            Debug.Log("dmanager is Empty!");
         }
     }
 
-    void ResetTrigger()
+    public void ConcatDialogue()
     {
-        triggered = false;
+        if(dmanager != null)
+        { 
+        dmanager.ConcatDialogue(dialogue);
+        }
+        else
+            Debug.Log("dmanager is Empty!");
     }
-
 
 
 }

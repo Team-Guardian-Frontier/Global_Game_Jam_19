@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 7336647520444655602}
   - component: {fileID: 7336647520444655600}
   - component: {fileID: 7336647520444655601}
+  - component: {fileID: 1476930407152876059}
   - component: {fileID: 5687714838805858358}
   - component: {fileID: 7336647520444655594}
   - component: {fileID: 7336647520444655595}
@@ -163,11 +164,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce39fda556976384daa40e3dcab69e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerText: {fileID: 0}
-  winText: {fileID: 0}
   health: 100
   damage: 25
   healing: 0
+--- !u!114 &1476930407152876059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7336647520444655612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc83659771e0631478adc2ee91790e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 0}
 --- !u!114 &5687714838805858358
 MonoBehaviour:
   m_ObjectHideFlags: 0
