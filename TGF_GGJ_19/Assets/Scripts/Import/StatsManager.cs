@@ -39,6 +39,8 @@ public class StatsManager : MonoBehaviour {
     void Update () {
 
         //Display();
+        HealthCalc();
+
 	}
 
 
@@ -63,7 +65,7 @@ public class StatsManager : MonoBehaviour {
         //don't forget the size of the text object!
         //*playerText.text = this.gameObject.name + ": " + health + "/" + totalH;
 
-        HealthCalc();
+       
 
     }
 
@@ -72,9 +74,6 @@ public class StatsManager : MonoBehaviour {
         if (health <= 0)
         {
             Loss();
-
-            //sound
-            FindObjectOfType<AudioManager>().Play("DeathSound");
         }
     }
 

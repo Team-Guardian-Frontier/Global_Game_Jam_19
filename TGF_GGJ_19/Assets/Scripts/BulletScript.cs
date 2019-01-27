@@ -88,5 +88,10 @@ public class BulletScript : MonoBehaviour
         
     }
 
+    void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
+
     //delete on exit.
 }

@@ -73,4 +73,9 @@ public class MousePos : MonoBehaviour {
             this.GetComponent<SpriteRenderer>().sprite = W;
         }
     }
+
+    public float getAngle()
+    {
+        return RAngle * Mathf.Deg2Rad;
+    }
 }

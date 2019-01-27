@@ -20,6 +20,7 @@ public class DamageClassesPlat : MonoBehaviour
     private float launchAngle;
     public Sprite BulletSprite;
 
+    //melee
     private RaycastHit2D[] CastResults;
     private ContactFilter2D FilterTriggers;
     public float AttackDist;
