@@ -225,30 +225,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114999700727325678, guid: ef2bfbd6690d667499d964320612e9f8,
         type: 3}
+      propertyPath: dialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114999700727325678, guid: ef2bfbd6690d667499d964320612e9f8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114999700727325678, guid: ef2bfbd6690d667499d964320612e9f8,
+        type: 3}
       propertyPath: dmanager
       value: 
       objectReference: {fileID: 1240364146}
+    - target: {fileID: 114999700727325678, guid: ef2bfbd6690d667499d964320612e9f8,
+        type: 3}
+      propertyPath: dialogue.Array.data[0].name
+      value: Marky Mark
+      objectReference: {fileID: 0}
+    - target: {fileID: 114999700727325678, guid: ef2bfbd6690d667499d964320612e9f8,
+        type: 3}
+      propertyPath: dialogue.Array.data[0].sentence
+      value: Josephbud, what's up?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114999700727325678, guid: ef2bfbd6690d667499d964320612e9f8,
+        type: 3}
+      propertyPath: dialogue.Array.data[1].name
+      value: Marky Mark
+      objectReference: {fileID: 0}
+    - target: {fileID: 114999700727325678, guid: ef2bfbd6690d667499d964320612e9f8,
+        type: 3}
+      propertyPath: dialogue.Array.data[1].sentence
+      value: Join the funky bunch, be my nakama
+      objectReference: {fileID: 0}
+    - target: {fileID: 114999700727325678, guid: ef2bfbd6690d667499d964320612e9f8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.data[0].name
+      value: aye
+      objectReference: {fileID: 0}
+    - target: {fileID: 114999700727325678, guid: ef2bfbd6690d667499d964320612e9f8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.data[0].sentence
+      value: yuh
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef2bfbd6690d667499d964320612e9f8, type: 3}
---- !u!1 &347410040 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1981372848700120, guid: ef2bfbd6690d667499d964320612e9f8,
-    type: 3}
-  m_PrefabInstance: {fileID: 347410039}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &347410041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347410040}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7bf201eaa68a224d8d37fd08985d5aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mydialogue: {fileID: 0}
 --- !u!1 &454168168
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,9 +425,69 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 459370109, guid: fbc01df0a060410418075f252449278a, type: 3}
+      propertyPath: dialogues.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 459370109, guid: fbc01df0a060410418075f252449278a, type: 3}
+      propertyPath: dialogues.Array.data[0].chain.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 459370109, guid: fbc01df0a060410418075f252449278a, type: 3}
+      propertyPath: dialogues.Array.data[1].chain.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 459370109, guid: fbc01df0a060410418075f252449278a, type: 3}
+      propertyPath: dialogues.Array.data[2].chain.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 459370109, guid: fbc01df0a060410418075f252449278a, type: 3}
       propertyPath: dmanager
       value: 
       objectReference: {fileID: 1240364146}
+    - target: {fileID: 459370109, guid: fbc01df0a060410418075f252449278a, type: 3}
+      propertyPath: dialogues.Array.data[0].size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 459370109, guid: fbc01df0a060410418075f252449278a, type: 3}
+      propertyPath: dialogues.Array.data[1].size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 459370109, guid: fbc01df0a060410418075f252449278a, type: 3}
+      propertyPath: dialogues.Array.data[2].size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 459370109, guid: fbc01df0a060410418075f252449278a, type: 3}
+      propertyPath: dialogues.Array.data[0].chain.Array.data[0].name
+      value: Marky Mark
+      objectReference: {fileID: 0}
+    - target: {fileID: 459370109, guid: fbc01df0a060410418075f252449278a, type: 3}
+      propertyPath: dialogues.Array.data[0].chain.Array.data[0].sentence
+      value: What
+      objectReference: {fileID: 0}
+    - target: {fileID: 459370109, guid: fbc01df0a060410418075f252449278a, type: 3}
+      propertyPath: dialogues.Array.data[0].chain.Array.data[1].name
+      value: Marky Mark
+      objectReference: {fileID: 0}
+    - target: {fileID: 459370109, guid: fbc01df0a060410418075f252449278a, type: 3}
+      propertyPath: dialogues.Array.data[0].chain.Array.data[1].sentence
+      value: Propane???
+      objectReference: {fileID: 0}
+    - target: {fileID: 459370109, guid: fbc01df0a060410418075f252449278a, type: 3}
+      propertyPath: dialogues.Array.data[1].chain.Array.data[0].name
+      value: Handsy Hank
+      objectReference: {fileID: 0}
+    - target: {fileID: 459370109, guid: fbc01df0a060410418075f252449278a, type: 3}
+      propertyPath: dialogues.Array.data[1].chain.Array.data[0].sentence
+      value: ye
+      objectReference: {fileID: 0}
+    - target: {fileID: 459370109, guid: fbc01df0a060410418075f252449278a, type: 3}
+      propertyPath: dialogues.Array.data[2].chain.Array.data[0].name
+      value: Me
+      objectReference: {fileID: 0}
+    - target: {fileID: 459370109, guid: fbc01df0a060410418075f252449278a, type: 3}
+      propertyPath: dialogues.Array.data[2].chain.Array.data[0].sentence
+      value: You Joke
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbc01df0a060410418075f252449278a, type: 3}
 --- !u!1 &633382866

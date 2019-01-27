@@ -7,15 +7,17 @@ using UnityEngine;
 public class MultipleDialogueTrigger : MonoBehaviour
 {
     public DialogueManager dmanager;
+
     [Space(20)]
-    public Dialogue[] dialogues;
+    public DialogueChain[] dialogues;
+    //Each row is a DT/Dialogue chain. Going up or down changes chains.
 
-
-    protected int dialInd;
-    private int current;
+    protected int Index;
+    private int Chain;
     
 
-    //can trigger any old script this way
+    //can trigger any old chain this way
+        //index is a row
     public void TriggerDialogue(int index)
     {
         try
@@ -29,6 +31,7 @@ public class MultipleDialogueTrigger : MonoBehaviour
         }
 
     }
+    //array contains multiple rows to insert.
     public void TriggerDialogue(int[] indices)
     {
 
@@ -75,5 +78,6 @@ public class MultipleDialogueTrigger : MonoBehaviour
     }
 
   
+    
     
 }

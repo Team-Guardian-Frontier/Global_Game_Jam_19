@@ -9,29 +9,21 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     public DialogueManager dmanager;
+    //dialogue chain
     [Space(20)]
-    public Dialogue dialogue;
+    public DialogueChain dialogue;
 
     public void TriggerDialogue()
     {
-        try { 
+
             dmanager.StartDialogue(dialogue);
             dmanager.StartAnim();
-        }
-        catch
-        {
-            Debug.Log("dmanager is Empty!");
-        }
     }
 
     public void ConcatDialogue()
     {
-        if(dmanager != null)
-        { 
         dmanager.ConcatDialogue(dialogue);
-        }
-        else
-            Debug.Log("dmanager is Empty!");
+        
     }
 
 

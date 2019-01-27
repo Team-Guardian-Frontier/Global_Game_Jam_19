@@ -16,13 +16,15 @@ public class DialogueManager : MonoBehaviour
     private Animator animator;
         //DON'T USE SINGLETON because of these object references. it's a pain. if you ever, make it a prefab, make it parent and child or some sorta relationship that's trackable.
 
-    private Queue<string> sentences;
+    private Queue<Dialogue> dialogues;
+
+    //name change
 
  
     // Start is called before the first frame update
     void Start()
     {
-        sentences = new Queue<string>();
+        dialogues = new Queue<Dialogue>();
         animator = this.GetComponentInChildren<Animator>();
     }
 
@@ -36,7 +38,6 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
-        sentences = null;
     }
 
     //GET (DOESN'T WORK)
@@ -44,48 +45,46 @@ public class DialogueManager : MonoBehaviour
     {
         bool result = false;
         //if sentences has stuff, true, else false.
-        if (sentences != null)
+        if (dialogues != null)
             result = true;
         return result;
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(DialogueChain dialoggies)
     {
 
+        dialogues.Clear();
 
-        nameText.text = dialogue.name;
-
-        sentences.Clear();
-
-        foreach (string sentence in dialogue.sentences)
+        foreach (Dialogue dialog in dialoggies.chain)
         {
-            sentences.Enqueue(sentence);
+            dialogues.Enqueue(dialog);
         }
 
         DisplayNextSentence();
     }
 
-    public void ConcatDialogue(Dialogue dialogue)
+    public void ConcatDialogue(DialogueChain dialogue)
     {
-        foreach (string sentence in dialogue.sentences)
+        foreach (Dialogue dialog in dialogue.chain)
         {
-            sentences.Enqueue(sentence);
+            dialogues.Enqueue(dialog);
         }
     }
 
     //returns if there is no more sentences (if, true, load next)
     public void DisplayNextSentence()
     {
-
-        if (sentences == null)
-            EndDialogue();
-        if (sentences.Count == 0)
+        if (dialogues.Count == 0)
         {
             EndDialogue();
             return;
         }
 
-        string sentence = sentences.Dequeue();
+        Dialogue current = dialogues.Dequeue();
+        string sentence = current.sentence;
+
+        nameText.text = current.name;
+
         dialogueText.text = sentence;
         //coroutine lets you run a function along unity that can start, stop and pause at any moment.
 
@@ -102,8 +101,6 @@ public class DialogueManager : MonoBehaviour
     IEnumerator TypeSentence (string sentence)
     {
         dialogueText.text = "";
-
-        Debug.Log((sentences == null) + " 6");
 
         foreach (char letter in sentence.ToCharArray()) 
         {
