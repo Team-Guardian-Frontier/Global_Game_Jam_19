@@ -231,7 +231,7 @@ PrefabInstance:
     - target: {fileID: 114999700727325678, guid: ef2bfbd6690d667499d964320612e9f8,
         type: 3}
       propertyPath: dialogue.chain.Array.size
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114999700727325678, guid: ef2bfbd6690d667499d964320612e9f8,
         type: 3}
@@ -267,6 +267,46 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogue.chain.Array.data[0].sentence
       value: yuh
+      objectReference: {fileID: 0}
+    - target: {fileID: 114999700727325678, guid: ef2bfbd6690d667499d964320612e9f8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.data[1].name
+      value: yeetaye
+      objectReference: {fileID: 0}
+    - target: {fileID: 114999700727325678, guid: ef2bfbd6690d667499d964320612e9f8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.data[1].sentence
+      value: skeetyuh
+      objectReference: {fileID: 0}
+    - target: {fileID: 114999700727325678, guid: ef2bfbd6690d667499d964320612e9f8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.data[2].name
+      value: aye
+      objectReference: {fileID: 0}
+    - target: {fileID: 114999700727325678, guid: ef2bfbd6690d667499d964320612e9f8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.data[2].sentence
+      value: efe
+      objectReference: {fileID: 0}
+    - target: {fileID: 114999700727325678, guid: ef2bfbd6690d667499d964320612e9f8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.data[3].name
+      value: aye
+      objectReference: {fileID: 0}
+    - target: {fileID: 114999700727325678, guid: ef2bfbd6690d667499d964320612e9f8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.data[3].sentence
+      value: wefwf
+      objectReference: {fileID: 0}
+    - target: {fileID: 114999700727325678, guid: ef2bfbd6690d667499d964320612e9f8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.data[4].name
+      value: aye
+      objectReference: {fileID: 0}
+    - target: {fileID: 114999700727325678, guid: ef2bfbd6690d667499d964320612e9f8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.data[4].sentence
+      value: gnuts
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef2bfbd6690d667499d964320612e9f8, type: 3}

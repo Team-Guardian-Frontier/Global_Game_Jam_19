@@ -18,6 +18,7 @@ public class StatsManager : MonoBehaviour {
     public int health; //health
     public int damage; //damage
     public int healing; //healing
+    public int myDamage; //damage you deal to others. Probably a later implementation. (invisible damage later on.
 
     //set during play, counters
     private int totalH;
@@ -46,7 +47,15 @@ public class StatsManager : MonoBehaviour {
     {
         //adds damage, applies food group method.
         health -= damage;
+
+        Debug.Log("Ow, I got hit!");
         
+    }
+    
+    public void TakeDamage(int cdamage)
+    {
+        //adds custom damage
+        health -= cdamage;
     }
 
     private void Display()

@@ -23,6 +23,7 @@ list of fields
     - myAnimator: gets the animator component for the player
 Notes:
 raycast not implemented yet, maybe later.
+Keep Collision Detection Continuous for no bounce.
 */
 
 
@@ -73,6 +74,14 @@ public class PlayerController : MonoBehaviour {
     private int flashC;
     public int flashAmount = 10;
 
+    //lastDirection
+    public enum LD
+    {
+        left,
+        right,
+    }
+    public LD lastDirection;
+
     void Start () {
         RigidBody_A = GetComponent<Rigidbody2D>();
 
@@ -95,7 +104,7 @@ public class PlayerController : MonoBehaviour {
         //boxcollider height
         Boxheight = 1.330018f;
 
-
+        lastDirection = LD.right;
     }
 
     // Update is called once per frame
@@ -109,9 +118,15 @@ public class PlayerController : MonoBehaviour {
         #region Movement code
         //can try to do if both are pressed.
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
             direction = -moveSpeed;
+            lastDirection = LD.left;
+        }
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
             direction = moveSpeed;
+            lastDirection = LD.right;
+        }
         else
             direction = 0;
 
