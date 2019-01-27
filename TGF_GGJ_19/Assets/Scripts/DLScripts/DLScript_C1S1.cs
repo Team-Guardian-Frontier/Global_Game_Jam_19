@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class DLScript_C1S1 : DLScript
 {
+    public GameObject TitleText;
 
     void Start()
     {
-        StartCoroutine(LateStart(2));
+        StartCoroutine(LateStart(5));
     }
 
     void Update()
@@ -21,7 +22,12 @@ public class DLScript_C1S1 : DLScript
     {
         yield return new WaitForSeconds(waitTime);
         //Your Function You Want to Call
+        Destroy(TitleText);
+
         myDialogue.TriggerAllDialogue();
+
+        
+
 
         /*
         int[] indices = { 0, 1, 3 };
@@ -34,7 +40,7 @@ public class DLScript_C1S1 : DLScript
     {
         while (!myDialogue.dmanager.IsEmpty())
         {
-            Debug.Log("Meme");
+
             yield return null;
         }
         

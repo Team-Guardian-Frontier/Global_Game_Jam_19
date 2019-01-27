@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Chapter 1.unity
+    guid: 5d61e2634326daa4a8d95f3d48d5d860
+  - enabled: 1
+    path: Assets/Scenes/Chapter1Flashback.unity
+    guid: d373dddfebeb73c4fa298a4614b30584
+  - enabled: 1
+    path: Assets/Scenes/Chapter1Scene2.unity
+    guid: 1b81574d665cae0479e5c76790b14edf
   m_configObjects: {}
