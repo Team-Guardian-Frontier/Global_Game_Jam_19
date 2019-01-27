@@ -26,6 +26,6 @@ public class Sibling2 : InteractTrigger
         Destroy(this.gameObject);
 
         //Transition to next Scene
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
