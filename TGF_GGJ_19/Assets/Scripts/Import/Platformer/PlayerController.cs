@@ -166,6 +166,7 @@ public class PlayerController : MonoBehaviour {
                 jumpTimeCounter -= Time.deltaTime;
             }
         }
+
         if (Input.GetKeyUp(KeyCode.W))
         {
             //stop jumping and set your counter to zero.  The timer will reset once we touch the ground again in the update function.

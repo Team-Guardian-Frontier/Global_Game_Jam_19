@@ -6,8 +6,8 @@ using UnityEngine;
 public class InteractTrigger : MonoBehaviour
 {
     public DialogueTrigger mydialogue;
-    private bool inside = false;
-    private bool triggered = false;
+    protected bool inside = false;
+    protected bool triggered = false;
     //only script I can really get a trigggered deal on. unless, single use.
 
     void Update()

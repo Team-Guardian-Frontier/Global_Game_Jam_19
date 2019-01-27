@@ -19,6 +19,7 @@ public class CameraController : MonoBehaviour {
 
     private Vector3 lastPlayerPosition;
     private float distanceToMove;
+    private float distanceToFloat;
 
 	// Use this for initialization
 	void Start () {
@@ -36,10 +37,11 @@ public class CameraController : MonoBehaviour {
         //only dealing with x-axis because moving left. This line will give the camera an amount to move.
 
         distanceToMove = thePlayer.transform.position.x - lastPlayerPosition.x;
-
+        distanceToFloat = thePlayer.transform.position.y - lastPlayerPosition.y;
+    
         //transform position is equal to a new vector 3 that only changes the x coordinate
 
-        transform.position = new Vector3(transform.position.x + distanceToMove, transform.position.y, transform.position.z);
+        transform.position = new Vector3(transform.position.x + distanceToMove, transform.position.y + distanceToFloat, transform.position.z);
 
         // finds the player's x,y, and z coordinates 
 
