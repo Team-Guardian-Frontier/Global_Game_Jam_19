@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc83659771e0631478adc2ee91790e97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueManager: {fileID: 0}
+  dialogueManager: {fileID: 7418681850454869585}
 --- !u!1001 &4256830762334227915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68,11 +68,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7418681850454869586}
     m_Modifications:
-    - target: {fileID: 139357464823086101, guid: 2c0781f644ec2f2418d429ce21502e40,
-        type: 3}
-      propertyPath: m_Name
-      value: DialogueBox
-      objectReference: {fileID: 0}
     - target: {fileID: 139357464823086090, guid: 2c0781f644ec2f2418d429ce21502e40,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -177,6 +172,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 139357464823086101, guid: 2c0781f644ec2f2418d429ce21502e40,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueBox
       objectReference: {fileID: 0}
     - target: {fileID: 139357464475403896, guid: 2c0781f644ec2f2418d429ce21502e40,
         type: 3}
