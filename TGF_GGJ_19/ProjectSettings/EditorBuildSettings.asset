@@ -8,10 +8,4 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/Chapter1Scene1.unity
-    guid: 7959d55a018052442b3adb3507a84cdf
-  - enabled: 0
-    path: Assets/Scenes/DillonPlatformerScene.unity
-    guid: 46f1c957bace69d4daaf2c8ecd652065
   m_configObjects: {}
