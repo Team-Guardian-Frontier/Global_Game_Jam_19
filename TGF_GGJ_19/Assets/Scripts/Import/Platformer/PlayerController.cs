@@ -229,6 +229,7 @@ public class PlayerController : MonoBehaviour {
     public void DamageController()
     {
 
+        //SIZEABLE LAG FROM COLLISION
         if (!invincible)
         {
             //Ignore collisions between player and enemy

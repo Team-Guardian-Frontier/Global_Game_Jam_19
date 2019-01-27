@@ -561,6 +561,61 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractTrigger (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 111.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
         type: 3}
       propertyPath: dialogue.chain.Array.size
@@ -630,61 +685,6 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogue.chain.Array.data[5].name
       value: Calendula & sister
-      objectReference: {fileID: 0}
-    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 111.83
-      objectReference: {fileID: 0}
-    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 647002446, guid: 3eb30c8bf45a0fc4da14a0d4314471d8, type: 3}
@@ -766,36 +766,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractTrigger
       objectReference: {fileID: 0}
-    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: dialogue.chain.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: dmanager
-      value: 
-      objectReference: {fileID: 1444576407}
-    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: dialogue.chain.Array.data[0].name
-      value: Older Brother
-      objectReference: {fileID: 0}
-    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: dialogue.chain.Array.data[0].sentence
-      value: Dang it! How did ye find meh?
-      objectReference: {fileID: 0}
-    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: dialogue.chain.Array.data[1].sentence
-      value: Yay!
-      objectReference: {fileID: 0}
-    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: dialogue.chain.Array.data[1].name
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -850,6 +820,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: dmanager
+      value: 
+      objectReference: {fileID: 1444576407}
+    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.data[0].name
+      value: Older Brother
+      objectReference: {fileID: 0}
+    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.data[0].sentence
+      value: Dang it! How did ye find meh?
+      objectReference: {fileID: 0}
+    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.data[1].sentence
+      value: Yay!
+      objectReference: {fileID: 0}
+    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.data[1].name
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 647002446, guid: 3eb30c8bf45a0fc4da14a0d4314471d8, type: 3}
@@ -1599,36 +1599,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractTrigger (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: dialogue.chain.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: dmanager
-      value: 
-      objectReference: {fileID: 1444576407}
-    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: dialogue.chain.Array.data[0].name
-      value: Middle Sibling
-      objectReference: {fileID: 0}
-    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: dialogue.chain.Array.data[0].sentence
-      value: Aww... it took meh forever to get up here!
-      objectReference: {fileID: 0}
-    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: dialogue.chain.Array.data[1].sentence
-      value: Yay!
-      objectReference: {fileID: 0}
-    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
-        type: 3}
-      propertyPath: dialogue.chain.Array.data[1].name
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8159378265201714596, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1683,6 +1653,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: dmanager
+      value: 
+      objectReference: {fileID: 1444576407}
+    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.data[0].name
+      value: Middle Sibling
+      objectReference: {fileID: 0}
+    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.data[0].sentence
+      value: Aww... it took meh forever to get up here!
+      objectReference: {fileID: 0}
+    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.data[1].sentence
+      value: Yay!
+      objectReference: {fileID: 0}
+    - target: {fileID: 426774223672038116, guid: 3eb30c8bf45a0fc4da14a0d4314471d8,
+        type: 3}
+      propertyPath: dialogue.chain.Array.data[1].name
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 647002446, guid: 3eb30c8bf45a0fc4da14a0d4314471d8, type: 3}

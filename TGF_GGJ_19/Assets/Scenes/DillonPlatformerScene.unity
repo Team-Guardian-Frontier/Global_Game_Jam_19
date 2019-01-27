@@ -868,6 +868,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformEnemy1
       objectReference: {fileID: 0}
+    - target: {fileID: 730407845, guid: bd02d63ea6e00d04b87a89a89369ee51, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 730407845, guid: bd02d63ea6e00d04b87a89a89369ee51, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.59
+      objectReference: {fileID: 0}
     - target: {fileID: 1284851674, guid: bd02d63ea6e00d04b87a89a89369ee51, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.99
@@ -927,14 +935,6 @@ PrefabInstance:
     - target: {fileID: 730407844, guid: bd02d63ea6e00d04b87a89a89369ee51, type: 3}
       propertyPath: m_Name
       value: GroundDetection
-      objectReference: {fileID: 0}
-    - target: {fileID: 730407845, guid: bd02d63ea6e00d04b87a89a89369ee51, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 730407845, guid: bd02d63ea6e00d04b87a89a89369ee51, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.59
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd02d63ea6e00d04b87a89a89369ee51, type: 3}
