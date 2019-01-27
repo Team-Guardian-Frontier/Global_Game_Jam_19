@@ -6,28 +6,33 @@ public class DLScript_Sample : MonoBehaviour
 {
     // copy trigger zone, load etc.
     public MultipleDialogueTrigger mydialogue;
-    
-    // Start is called before the first frame update
+
     void Start()
     {
+        StartCoroutine(LateStart(2));
+
         
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator LateStart(float waitTime)
     {
+        yield return new WaitForSeconds(waitTime);
+        //Your Function You Want to Call
         
+        int[] indices = { 0, 1 };
+        mydialogue.TriggerDialogue(indices);
+
+        StartCoroutine("Memery");
     }
 
-    //Trigger collision detection for player
-    private void OnTriggerEnter2D(Collider2D other)
+    IEnumerator Memery()
     {
-        //checks if what entered trigger
-        if (other.gameObject.CompareTag("Player"))
+        while (!mydialogue.dmanager.IsEmpty())
         {
-            int[] indices = { 0, 1, 2 };
-            mydialogue.TriggerDialogue(indices);
+            yield return null;
         }
+        mydialogue.ConcatDialogue(2);
     }
+ 
    
 }

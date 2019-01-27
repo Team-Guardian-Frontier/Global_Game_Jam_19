@@ -7,11 +7,6 @@ public class TriggerZone : MonoBehaviour
 
     public DialogueTrigger mydialogue;
 
-    // Update is called once per frame
-    void Start()
-    {
-        mydialogue = this.GetComponent<DialogueTrigger>();
-    }
 
     //Trigger collision detection for player
     private void OnTriggerEnter2D(Collider2D other)

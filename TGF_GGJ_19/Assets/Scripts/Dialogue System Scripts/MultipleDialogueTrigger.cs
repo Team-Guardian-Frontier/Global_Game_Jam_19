@@ -40,7 +40,7 @@ public class MultipleDialogueTrigger : MonoBehaviour
 
             for (int now = 1 ; now < indices.Length; now++)
             {
-                dmanager.ConcatDialogue(dialogues[indices[now]]);
+                dmanager.ConcatDialogue(dialogues[now]);
             }
 
             dmanager.StartAnim();

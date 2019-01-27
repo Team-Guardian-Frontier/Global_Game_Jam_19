@@ -40,15 +40,16 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("IsOpen", false);
     }
 
-    //GET (DOESN'T WORK)
-    public bool IsPlaying()
+    //GET 
+    public bool IsEmpty()
     {
         bool result = false;
         //if sentences has stuff, true, else false.
-        if (dialogues != null)
+        if (dialogues.Count == 0)
             result = true;
         return result;
     }
+    //make it wait etc. coroutine, or just wait for seconds.
 
     public void StartDialogue(DialogueChain dialoggies)
     {
@@ -88,7 +89,9 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = sentence;
         //coroutine lets you run a function along unity that can start, stop and pause at any moment.
 
-        StopCoroutine("TypeSentence");
+        //needed to stop everything overlaying.
+        //ONLY STOPS BEHAVIOURS ON THIS MONO
+        StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
 
         
@@ -97,7 +100,8 @@ public class DialogueManager : MonoBehaviour
     //can have discrete display next that loads next sentence without animation if need be. idk.
     //might not even need animations. can have those be separate calls.
 
-    //I don't know what this does.
+        
+    //Causes problems with puttin gin more text. cuz lays more in.
     IEnumerator TypeSentence (string sentence)
     {
         dialogueText.text = "";
@@ -108,7 +112,7 @@ public class DialogueManager : MonoBehaviour
             yield return null;
         }
     }
-
+    
  
     
     

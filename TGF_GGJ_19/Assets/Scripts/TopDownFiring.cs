@@ -32,6 +32,7 @@ public class TopDownFiring : MonoBehaviour
 
         if(attacktimer>attackspeed)
         {
+            //IF YOU NEED FULL AUTO, CHANGE TO GETMOUSEBUTTON
             if(Input.GetMouseButtonDown(0))
             {
                 RangeAttack();
