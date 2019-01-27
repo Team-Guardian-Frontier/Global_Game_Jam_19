@@ -7,13 +7,16 @@ public class InteractTrigger : MonoBehaviour
 {
     public DialogueTrigger mydialogue;
     private bool inside = false;
+    private bool triggered = false;
+    //only script I can really get a trigggered deal on. unless, single use.
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I) && inside)
+        if (Input.GetKeyDown(KeyCode.I) && inside && !triggered)
         {
             mydialogue.TriggerDialogue();
             Debug.Log("you hit it");
+                triggered = true;
         }
     }
 
@@ -34,6 +37,7 @@ public class InteractTrigger : MonoBehaviour
         {
             Debug.Log("Dat boy");
             inside = false;
+            triggered = false;
         }
     }
 }

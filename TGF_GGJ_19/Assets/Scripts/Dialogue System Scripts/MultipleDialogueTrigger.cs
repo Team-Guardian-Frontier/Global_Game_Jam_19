@@ -51,6 +51,25 @@ public class MultipleDialogueTrigger : MonoBehaviour
         }
     }
 
+    public void TriggerAllDialogue()
+    {
+        try
+        {
+
+            foreach (DialogueChain dialoggy in dialogues)
+            {
+                dmanager.ConcatDialogue(dialoggy);
+            }
+
+            dmanager.StartAnim();
+            dmanager.DisplayNextSentence();
+        }
+        catch
+        {
+            Debug.Log("dmanager is Empty!");
+        }
+    }
+
     public void ConcatDialogue(int index)
     {
         try { 

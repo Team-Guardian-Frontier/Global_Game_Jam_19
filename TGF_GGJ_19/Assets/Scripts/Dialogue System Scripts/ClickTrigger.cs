@@ -5,9 +5,14 @@ using UnityEngine;
 public class ClickTrigger : MonoBehaviour
 {
     public DialogueTrigger mydialogue;
+    private bool triggered = false;
 
     private void OnMouseDown()
     {
-        mydialogue.TriggerDialogue();
+        if (!triggered)
+        {
+            mydialogue.TriggerDialogue();
+            triggered = true;
+        }
     }
 }

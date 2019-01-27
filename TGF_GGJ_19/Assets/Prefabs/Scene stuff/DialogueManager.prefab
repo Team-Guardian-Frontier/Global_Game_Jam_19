@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7418681850454869586}
   - component: {fileID: 7418681850454869585}
+  - component: {fileID: 5963944667788391038}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -47,6 +48,19 @@ MonoBehaviour:
   nameText: {fileID: 4250366596411423012}
   dialogueText: {fileID: 4250366596388887684}
   animator: {fileID: 4250366596447941058}
+--- !u!114 &5963944667788391038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7418681850454869584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc83659771e0631478adc2ee91790e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 0}
 --- !u!1001 &4256830762334227915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54,6 +68,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7418681850454869586}
     m_Modifications:
+    - target: {fileID: 139357464823086101, guid: 2c0781f644ec2f2418d429ce21502e40,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueBox
+      objectReference: {fileID: 0}
     - target: {fileID: 139357464823086090, guid: 2c0781f644ec2f2418d429ce21502e40,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -159,11 +178,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 139357464823086101, guid: 2c0781f644ec2f2418d429ce21502e40,
-        type: 3}
-      propertyPath: m_Name
-      value: DialogueBox
-      objectReference: {fileID: 0}
     - target: {fileID: 139357464475403896, guid: 2c0781f644ec2f2418d429ce21502e40,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -172,7 +186,12 @@ PrefabInstance:
     - target: {fileID: 139357464475403896, guid: 2c0781f644ec2f2418d429ce21502e40,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DisplayNextSentence
+      value: InputDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 139357464475403896, guid: 2c0781f644ec2f2418d429ce21502e40,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c0781f644ec2f2418d429ce21502e40, type: 3}

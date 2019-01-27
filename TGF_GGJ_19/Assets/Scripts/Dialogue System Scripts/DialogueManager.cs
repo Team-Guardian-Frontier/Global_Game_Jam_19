@@ -18,6 +18,10 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<Dialogue> dialogues;
 
+    private bool talking = false;
+    private Dialogue current;
+    private string curSent;
+
     //name change
 
  
@@ -72,6 +76,18 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public void InputDialogue()
+    {
+        if (talking)
+        {
+            StopAllCoroutines();
+            dialogueText.text = curSent;
+            talking = false;
+        }
+        else
+            DisplayNextSentence();
+    }
+
     //returns if there is no more sentences (if, true, load next)
     public void DisplayNextSentence()
     {
@@ -81,18 +97,17 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        Dialogue current = dialogues.Dequeue();
-        string sentence = current.sentence;
+        current = dialogues.Dequeue();
+        curSent = current.sentence;
 
         nameText.text = current.name;
-
-        dialogueText.text = sentence;
         //coroutine lets you run a function along unity that can start, stop and pause at any moment.
 
+        talking = true;
         //needed to stop everything overlaying.
         //ONLY STOPS BEHAVIOURS ON THIS MONO
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        StartCoroutine(TypeSentence(curSent));
 
         
     }
@@ -111,6 +126,7 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text += letter;
             yield return null;
         }
+        talking = false;
     }
     
  

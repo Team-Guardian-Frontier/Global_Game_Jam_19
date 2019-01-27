@@ -54,13 +54,7 @@ public class PlayerController : MonoBehaviour {
     //ground collision
     public bool grounded;
     public LayerMask whatIsGround;
-    //raycast collision
-    const float skinWidth = .015f;
-    public int horizontalRayCount = 4;
-    public int verticalRayCount = 4;
-    float horizontalRaySpacing;
-    float verticalRaySpacing;
-    RaycastOrigins raycastOrigins;
+
 
     private float totalDamage;
 
@@ -82,6 +76,9 @@ public class PlayerController : MonoBehaviour {
     }
     public LD lastDirection;
 
+    private StatsManager myStats;
+    
+
     void Start () {
         RigidBody_A = GetComponent<Rigidbody2D>();
 
@@ -95,6 +92,7 @@ public class PlayerController : MonoBehaviour {
 
         myAnimator = GetComponent<Animator>();
 
+        myStats = this.GetComponent<StatsManager>();
 
 
         invincible = false;
@@ -134,17 +132,6 @@ public class PlayerController : MonoBehaviour {
 
         #endregion
 
-        #region Collision Code (Raycast)
-        //Tutorial from Sebastian Lague
-        UpdateRaycastOrigins();
-        CalculateRaySpacing();
-
-        for (int i = 0; i < verticalRayCount; i++)
-        {
-            Debug.DrawRay(raycastOrigins.bottomLeft + Vector2.right * verticalRaySpacing * i, Vector2.up * -2, Color.red);
-        }
-
-        #endregion
 
         #region JUMP CODE
 
@@ -238,30 +225,28 @@ public class PlayerController : MonoBehaviour {
     }
 
     //Damage called from other objects
-    public void Damage()
+    public void DamageController()
     {
 
         if (!invincible)
         {
-            Debug.Log("Damage");
+            //Ignore collisions between player and enemy
+            Physics2D.IgnoreLayerCollision(9, 10, true);
+            myStats.TakeDamage();
+            Invoke("ResetInvulnerability", iTime);
+
+            Debug.Log("dam" + totalDamage);
 
         }
-
-    }
-
-    //NOTE: make wins and losses occur on the player. who needs game managers?
-    public void Winning()
-    {
-        
-    }
-    void Losing()
-    {
+        //else no damage.
 
     }
 
     void ResetInvulnerability()
     {
         invincible = false;
+        //Ignore collisions between player and enemy
+        Physics2D.IgnoreLayerCollision(9, 10, false);
 
     }
 
@@ -286,36 +271,5 @@ public class PlayerController : MonoBehaviour {
        
     }
 
-    //RAYCAST COLLISION
-    //tutorial from Sebastian Lague
-    void UpdateRaycastOrigins()
-    {
-        Bounds bounds = boxCollider.bounds;
-        bounds.Expand(skinWidth * -2);
-
-        raycastOrigins.bottomLeft = new Vector2(bounds.min.x, bounds.min.y);
-        raycastOrigins.bottomRight = new Vector2(bounds.max.x, bounds.min.y);
-        raycastOrigins.topLeft = new Vector2(bounds.min.x, bounds.max.y);
-        raycastOrigins.topRight = new Vector2(bounds.max.x, bounds.max.y);
-    }
-
-
-    void CalculateRaySpacing()
-    {
-        Bounds bounds = boxCollider.bounds;
-        bounds.Expand(skinWidth * -2);
-
-        horizontalRayCount = Mathf.Clamp(horizontalRayCount, 2, int.MaxValue);
-        verticalRayCount = Mathf.Clamp(verticalRayCount, 2, int.MaxValue);
-
-        horizontalRaySpacing = bounds.size.y / (horizontalRayCount - 1);
-        verticalRaySpacing = bounds.size.x / (verticalRayCount - 1);
-    }
-
-    struct RaycastOrigins
-    {
-        public Vector2 topLeft, topRight;
-        public Vector2 bottomLeft, bottomRight;
-    }
 
 }

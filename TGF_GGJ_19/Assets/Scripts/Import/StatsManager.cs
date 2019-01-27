@@ -19,6 +19,8 @@ public class StatsManager : MonoBehaviour {
     public int damage; //damage
     public int healing; //healing
     public int myDamage; //damage you deal to others. Probably a later implementation. (invisible damage later on.
+    //pass
+    public SceneStats sceneManager;
 
     //set during play, counters
     private int totalH;
@@ -81,6 +83,7 @@ public class StatsManager : MonoBehaviour {
     {
         Debug.Log("Is this...?");
         //*winText.text = "Game Over! You are Winner!";
+        sceneManager.Dying(this.tag);
         Destroy(gameObject);
     }
 }
