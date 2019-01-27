@@ -14,6 +14,11 @@ public class DLScript_Sample : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        Debug.Log(mydialogue.dmanager.IsEmpty());
+    }
+
     IEnumerator LateStart(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
@@ -22,6 +27,7 @@ public class DLScript_Sample : MonoBehaviour
         int[] indices = { 0, 1 };
         mydialogue.TriggerDialogue(indices);
 
+        //works, cuz waited to concat? Idk. dunno if it works
         StartCoroutine("Memery");
     }
 

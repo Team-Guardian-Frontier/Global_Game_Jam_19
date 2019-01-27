@@ -81,10 +81,18 @@ public class BulletScript : MonoBehaviour
             collision.GetComponent<StatsManager>().TakeDamage();
 
 
-            Destroy(gameObject);
+            
         }
 
-        //difficult to get a player interaction.
+        if (collision.gameObject.CompareTag("Player"))
+        {
+
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        //difficult to get a player interaction, to enemy.
         
     }
 
