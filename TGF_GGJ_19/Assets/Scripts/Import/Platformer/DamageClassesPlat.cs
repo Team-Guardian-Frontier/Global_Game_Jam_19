@@ -53,6 +53,8 @@ public class DamageClassesPlat : MonoBehaviour
         {
             if (currentMode == Mode.Melee)
                 MeleeAttack();
+            else
+                RangeAttack();
         }
 
         if (Input.GetKeyDown(KeyCode.X))
@@ -69,7 +71,6 @@ public class DamageClassesPlat : MonoBehaviour
     //Melee damage
     void MeleeAttack()
     {
-        Debug.Log("Melee Call");
 
         if (myController.lastDirection == PlayerController.LD.right)
             DirectAttack = Vector2.right;
@@ -80,14 +81,18 @@ public class DamageClassesPlat : MonoBehaviour
 
         if (result > 0)
         {
-            Debug.Log("Register Hit");
+ 
             //Register hit
             if (CastResults[0].collider.CompareTag("Enemy"))
             {
                 StatsManager enemyStand = CastResults[0].collider.GetComponent<StatsManager>();
                 enemyStand.TakeDamage();
-                Debug.Log("Sent Damage");
             }
         }
+    }
+
+    void RangeAttack()
+    {
+        
     }
 }
