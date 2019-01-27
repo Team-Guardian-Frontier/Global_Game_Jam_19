@@ -9,16 +9,22 @@ public class DamageClassesPlat : MonoBehaviour
 {
     //controls, Z to damage, X to switch. visuals are gonna be killer.
     //don't let yourself burnout!
-    public PlayerController myController;
-    public StatsManager myStats;
+    private PlayerController myController;
+    private StatsManager myStats;
 
-    public Collider2D myCollider;
+    private Collider2D myCollider;
+
+    //public bullet stuff
+    public GameObject bullet;
+    public float bulletSpeed;
+    private float launchAngle;
+    public Sprite BulletSprite;
 
     private RaycastHit2D[] CastResults;
     private ContactFilter2D FilterTriggers;
-
     public float AttackDist;
     private Vector2 DirectAttack;
+
     //raycasts
 
     //Modes
@@ -28,6 +34,10 @@ public class DamageClassesPlat : MonoBehaviour
         Mage,
     }
     private Mode currentMode = Mode.Melee;
+
+    //Attack rate, in frames
+    public int attackspeed;
+    private int attacktimer = 0;
 
 
     // Start is called before the first frame update
@@ -43,20 +53,31 @@ public class DamageClassesPlat : MonoBehaviour
         //set up filter to just not interact with trigger colliders
         FilterTriggers.useTriggers = false;
 
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        //timer increment
+        attacktimer++;
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        //change attack speed with mode if needed.
+        //attack
+        if (attacktimer >= attackspeed)
         {
-            if (currentMode == Mode.Melee)
-                MeleeAttack();
-            else
-                RangeAttack();
+            if (Input.GetKeyDown(KeyCode.Z))
+            {
+                if (currentMode == Mode.Melee)
+                    MeleeAttack();
+                else
+                    RangeAttack();
+                attacktimer = 0;
+            }
         }
 
+        //swap
         if (Input.GetKeyDown(KeyCode.X))
         {
             if (currentMode == Mode.Melee)
@@ -77,6 +98,7 @@ public class DamageClassesPlat : MonoBehaviour
         else
             DirectAttack = Vector2.left;
 
+
         int result = myCollider.Cast(DirectAttack, FilterTriggers, CastResults, AttackDist, false);
 
         if (result > 0)
@@ -93,6 +115,16 @@ public class DamageClassesPlat : MonoBehaviour
 
     void RangeAttack()
     {
-        
+        if (myController.lastDirection == PlayerController.LD.right)
+            launchAngle = 0f;
+        else
+            launchAngle = Mathf.PI;
+
+        GameObject bulletbaby = (GameObject) Instantiate(bullet, transform.position, transform.rotation, transform);
+        BulletScript bulletScript = bulletbaby.GetComponent<BulletScript>();
+        //set bullet properties
+        bulletScript.setSpeedAngle(bulletSpeed, launchAngle);
+        bulletScript.setSprite(BulletSprite);
+       
     }
 }

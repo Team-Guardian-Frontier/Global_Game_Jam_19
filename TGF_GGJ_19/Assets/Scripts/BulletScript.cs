@@ -9,33 +9,43 @@ public class BulletScript : MonoBehaviour
     public float speed;
     public float angle;
     public int CustomDamage;
-    public Sprite[] SpriteBank;
 
     private Vector2 Vector;
     private Rigidbody2D myBody;
     private SpriteRenderer myRender;
+    private Collider2D myCollider;
 
-    // Start is called before the first frame update
-    void Start()
+    // Start isn't called when initializing/cloning. cuz ok i guess.
+    void Awake()
     {
         myBody = this.GetComponent<Rigidbody2D>();
         myRender = this.GetComponent<SpriteRenderer>();
+        myCollider = this.GetComponent<Collider2D>();
+
+
+        myCollider.isTrigger = true;
     }
 
+    //setters
     public void setSpeedAngle(float inSpeed, float inAngle)
     {
         speed = inSpeed;
         angle = inAngle;
     }
 
-    public void setSprite(int ind)
+    public void setSprite(Sprite SpriteCranberry)
     {
-        if (ind < SpriteBank.Length)
+ 
+        myRender.sprite = SpriteCranberry;
+
+        /*if (ind < SpriteBank.Length && ind >=0)
         {
             myRender.sprite = SpriteBank[ind];
         }
         else
-            myRender.sprite = SpriteBank[ind];
+            myRender.sprite = SpriteBank[0];
+
+        Dunno why a spritebank doesn't work. */
     }
 
 
@@ -61,20 +71,21 @@ public class BulletScript : MonoBehaviour
     }
 
     //damage on collision
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("Bullet HIt");
-        //collision.othercollider refers to this obj's collider, for some godforsaken reason.
-        GameObject visiting = collision.collider.gameObject;
-        Debug.Log("HasObject: " + (visiting != null));
-        Debug.Log("ObjTag" + visiting.tag);
-        if (visiting.CompareTag("Enemy"))
+    //need trigger to avoid physics
+    private void OnTriggerEnter2D(Collider2D collision)
+{
+
+        
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            visiting.GetComponent<StatsManager>().TakeDamage();
-            Debug.Log("Das an enemy");
+            collision.GetComponent<StatsManager>().TakeDamage();
+
+
+            Destroy(gameObject);
         }
 
-        Destroy(gameObject);
+        //difficult to get a player interaction.
+        
     }
 
     //delete on exit.

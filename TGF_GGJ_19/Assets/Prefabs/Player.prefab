@@ -190,6 +190,7 @@ MonoBehaviour:
   health: 100
   damage: 25
   healing: 25
+  myDamage: 0
 --- !u!114 &290742957702371285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,10 +203,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20ba318a3b5cf664494a5007ea21be33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myController: {fileID: 0}
-  myStats: {fileID: 0}
-  myCollider: {fileID: 0}
-  myRigidbody: {fileID: 0}
+  bullet: {fileID: 3635562023718635207, guid: ebd786ed5c0d4b24c8cbd004fca1276e, type: 3}
+  bulletSpeed: 2
+  BulletSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  AttackDist: 0.5
+  attackspeed: 60
 --- !u!95 &1283812257
 Animator:
   serializedVersion: 3
